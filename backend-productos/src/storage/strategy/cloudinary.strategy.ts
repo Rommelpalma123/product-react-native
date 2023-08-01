@@ -14,6 +14,6 @@ export class CloudinaryStrategy implements IStorageStrategy {
     const respuesta = await cloudinary.uploader.upload(
       `data:image/png;base64,${base64}`,
     );
-    return respuesta.url;
+    return respuesta.secure_url;
   }
 }
